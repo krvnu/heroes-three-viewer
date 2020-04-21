@@ -1,0 +1,66 @@
+.filter-card {
+  margin: 4px;
+}
+
+.filter-field {
+  margin-left: 20px;
+}
+
+.unit-card {
+  height: 220px;
+  width: 220px;
+}
+
+.unit-card:hover {
+  opacity: 0.9;
+}
+
+.unit-card-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+};
+
+.mat-card-header {
+  padding-bottom: 10px;
+}
+
+.castle {
+  color: lightskyblue;
+}
+
+.rampart {
+  color: lightcoral;
+}
+
+.tower {
+  color: lightsteelblue;
+}
+
+.inferno {
+  color: lightgoldenrodyellow;
+}
+
+.dungeon {
+  color: lightpink;
+}
+
+.necropolis {
+  color: lightgreen;
+}
+
+.stronghold {
+  color: orange;
+}
+
+.fortress {
+  color: lightsalmon;
+}
+
+.conflux {
+  color: yellow;
+}
+
+.neutral {
+  color: white;
+}

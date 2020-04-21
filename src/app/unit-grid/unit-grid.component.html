@@ -1,0 +1,69 @@
+<mat-card class="filter-card">
+  <h3>Filter Options:</h3>
+
+  <mat-form-field class="filter-field" color="accent">
+    <mat-label>Sort By</mat-label>
+    <mat-select [(value)]="sortBy">
+      <mat-option value="castle" (click)="sortUnits()">Castle</mat-option>
+      <mat-option value="level" (click)="sortUnits()">Level</mat-option>
+      <mat-option value="attack" (click)="sortUnits()">Attack</mat-option>
+      <mat-option value="defence" (click)="sortUnits()">Defense</mat-option>
+      <mat-option value="speed" (click)="sortUnits()">Speed</mat-option>
+      <mat-option value="health" (click)="sortUnits()">Health</mat-option>
+      <mat-option value="gold" (click)="sortUnits()">Gold</mat-option>
+      <mat-option value="growth" (click)="sortUnits()">Growth</mat-option>
+      <mat-option value="minDamage" (click)="sortUnits()">Min Damage</mat-option>
+      <mat-option value="maxDamage" (click)="sortUnits()">Max Damage</mat-option>
+      <mat-option value="aiValue" (click)="sortUnits()">AI Value</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="filter-field" color="accent">
+    <mat-label>Direction</mat-label>
+    <mat-select [(value)]="ascending">
+      <mat-option [value]="true" (click)="sortUnits()">Ascending</mat-option>
+      <mat-option [value]="false" (click)="sortUnits()">Descending</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="filter-field" color="accent">
+    <mat-label>Castles</mat-label>
+    <mat-select [formControl]="castleFormControl" multiple>
+      <mat-select-trigger>
+        {{castleFormControl.value ? castleFormControl.value[0] : ''}}
+        <span *ngIf="castleFormControl.value?.length > 1">
+          (+{{castleFormControl.value.length - 1}} {{castleFormControl.value?.length === 2 ? 'other' : 'others'}})
+        </span>
+      </mat-select-trigger>
+      <mat-option *ngFor="let castle of castles" [value]="castle" (click)="sortUnits()">{{castle}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="filter-field" color="accent">
+    <mat-label>Search</mat-label>
+    <input matInput placeholder="Ex. Mage" [(ngModel)]="search" (input)="sortUnitsWithSearch($event.target.value)">
+    <button mat-button *ngIf="search" matSuffix mat-icon-button aria-label="Clear" (click)="resetWithoutSearch()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+</mat-card>
+
+<mat-grid-list cols="{{columns}}" (window:resize)="onResize($event)">
+  <mat-grid-tile *ngFor="let unit of units" (click)="openDialog(unit)">
+    <mat-card class="unit-card">
+      <mat-card-header>
+        <mat-card-title>{{unit.unitName}}</mat-card-title>
+        <mat-card-subtitle [class]="unit.castle | lowercase">{{unit.castle}}</mat-card-subtitle>
+      </mat-card-header>
+      <!-- <img mat-card-image src="https://via.placeholder.com/100" alt="Placeholder"> -->
+      <mat-card-content>
+        <img class="unit-card-img" [src]="'assets/units/' + (unit.unitName.replace(' ', '') | lowercase) + '.png'">
+      </mat-card-content>
+
+      <!-- <mat-card-actions align="end">
+        <button mat-stroked-button color="accent">INFO</button>
+      </mat-card-actions> -->
+    </mat-card>
+
+  </mat-grid-tile>
+</mat-grid-list>

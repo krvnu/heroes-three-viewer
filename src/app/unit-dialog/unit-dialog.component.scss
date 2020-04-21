@@ -1,0 +1,64 @@
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+
+.level {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  padding-top: 10px;
+}
+
+.icon {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-left: 10px;
+  padding-top: 10px;
+}
+
+.castle {
+  color: lightskyblue;
+}
+
+.rampart {
+  color: lightcoral;
+}
+
+.tower {
+  color: lightsteelblue;
+}
+
+.inferno {
+  color: lightgoldenrodyellow;
+}
+
+.dungeon {
+  color: lightpink;
+}
+
+.necropolis {
+  color: lightgreen;
+}
+
+.stronghold {
+  color: orange;
+}
+
+.fortress {
+  color: lightsalmon;
+}
+
+.conflux {
+  color: yellow;
+}
+
+.neutral {
+  color: white;
+}

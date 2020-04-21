@@ -1,0 +1,62 @@
+<h1 mat-dialog-title>{{unit.unitName}}</h1>
+<h3 [class]="unit.castle | lowercase">{{unit.castle}}</h3>
+
+<div class="row">
+  <div class="column">
+    <div mat-dialog-content>
+      <mat-icon color="accent" class="icon">drag_indicator</mat-icon>
+      <h5 class="level">Level: {{unit.level}}</h5>
+    </div>
+    <div mat-dialog-content>
+      <mat-icon color="accent" class="icon">add_circle_outline</mat-icon>
+      <h5 class="level">Attack: {{unit.attack}}</h5>
+    </div>
+    <div mat-dialog-content>
+      <mat-icon color="accent" class="icon">verified_user</mat-icon>
+      <h5 class="level">Defence: {{unit.defence}}</h5>
+    </div>
+    <div mat-dialog-content>
+      <mat-icon color="accent" class="icon">fast_forward</mat-icon>
+      <h5 class="level">Speed: {{unit.speed}}</h5>
+    </div>
+    <div mat-dialog-content>
+      <mat-icon color="accent" class="icon">favorite</mat-icon>
+      <h5 class="level">Health: {{unit.health}}</h5>
+    </div>
+    <div mat-dialog-content>
+      <mat-icon color="accent" class="icon">keyboard_arrow_up</mat-icon>
+      <h5 class="level">Growth: {{unit.growth}}</h5>
+    </div>
+  </div>
+  <div class="column">
+    <div mat-dialog-content>
+      <mat-icon color="accent" class="icon">attach_money</mat-icon>
+      <h5 class="level">Gold: {{unit.gold}}</h5>
+    </div>
+    <div mat-dialog-content>
+      <mat-icon color="accent" class="icon">account_balance</mat-icon>
+      <h5 class="level">AI Value: {{unit.aiValue}}</h5>
+    </div>
+    <div mat-dialog-content>
+      <mat-icon color="accent" class="icon">call_received</mat-icon>
+      <h5 class="level">Min Damage: {{unit.minDamage}}</h5>
+    </div>
+    <div mat-dialog-content>
+      <mat-icon color="accent" class="icon">call_made</mat-icon>
+      <h5 class="level">Max Damage: {{unit.maxDamage}}</h5>
+    </div>
+    <div mat-dialog-content>
+      <mat-icon color="accent" class="icon">arrow_right_alt</mat-icon>
+      <h5 class="level">Additional Item: {{unit.additionalItem}}</h5>
+    </div>
+    <div mat-dialog-content>
+      <mat-icon color="accent" class="icon">eco</mat-icon>
+      <h5 class="level">Special Abilities: {{unit.specialAbilities}}</h5>
+    </div>
+  </div>
+</div>
+
+<div mat-dialog-actions align="end">
+  <button mat-button (click)="onNoClick()">Exit</button>
+  <!-- <button mat-button [mat-dialog-close]="unit.level" cdkFocusInitial>Ok</button> -->
+</div>
