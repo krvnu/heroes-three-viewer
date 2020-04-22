@@ -1,5 +1,10 @@
 # HeroesThreeViewer
 
+### To Do:
+- Component to display information about maps.
+- Component for graphing unit statistics.
+- Component for about and future work.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
 
 ## Development server
