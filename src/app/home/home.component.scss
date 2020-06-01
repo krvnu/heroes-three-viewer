@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+
+  background: rgb(2,0,36);
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(105,240,174,1) 100%, rgba(0,212,255,1) 100%);
+};
+
+.card {
+  margin-top: 1em;
+  width: 75%;
+  height: 85%;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.mat-card-title {
+  font-family: 'Merriweather', serif;
+}
+
+.wiki-link {
+  color: rgba(105,240,174,1);
+}
+

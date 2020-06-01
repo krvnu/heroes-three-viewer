@@ -1,3 +1,13 @@
+.background {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  padding-top: 4px;
+
+  background: rgb(2,0,36);
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(105,240,174,1) 100%);
+}
+
 .filter-card {
   margin: 4px;
 }

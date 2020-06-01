@@ -1,5 +1,6 @@
 .nav-bar-item {
   margin-left: 2em;
+  font-family: 'Merriweather', serif;
 };
 
 .nav-bar-spacer {
@@ -8,4 +9,10 @@
 
 .nav-bar-links {
   padding: 0 14px;
+  font-family: 'Merriweather', serif;
+};
+
+.nav-bar-links:hover {
+  opacity: 0.7;
+  cursor: pointer;
 };

@@ -18,13 +18,19 @@ import { UnitDialog } from './unit-dialog/unit-dialog.component';
 import {MatSelectModule} from '@angular/material/select';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
+import { RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { NgxEchartsModule } from 'ngx-echarts';
+import { ChartsComponent } from './charts/charts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     UnitGridComponent,
-    UnitDialog
+    UnitDialog,
+    HomeComponent,
+    ChartsComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +47,13 @@ import {MatInputModule} from '@angular/material/input';
     MatSelectModule,
     FormsModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    NgxEchartsModule,
+    RouterModule.forRoot([
+      { path: '', component: HomeComponent },
+      { path: 'units', component: UnitGridComponent },
+      { path: 'charts', component: ChartsComponent },
+    ])
   ],
   entryComponents: [
     UnitDialog
